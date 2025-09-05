@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-bangla {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.active {
+  background-color: #422ad5;
+  color: white;
+}
+
+:root {
+  --primary: #4361ee;
+  --secondary: #3a0ca3;
+  --accent: #4cc9f0;
+  --light: #f8f9fa;
+  --dark: #212529;
+}
+
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(to right, var(--secondary), var(--primary));
+  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.vocab-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.vocab-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px -10px rgba(37, 99, 235, 0.3);
+}
+
+.modal {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal.active {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.synonym-tag {
+  transition: all 0.2s ease;
+}
+
+.synonym-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.points-badge {
+  box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.3);
+}
+
+
+
+.sound-btn {
+  transition: all 0.2s ease;
+}
+
+.sound-btn:hover {
+  transform: scale(1.1);
+  background-color: #4f46e5;
+}
+
+.language-badge {
+  position: relative;
+}
+
+.language-badge::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  border-radius: 2px;
+}
+
