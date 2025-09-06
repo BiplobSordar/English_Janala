@@ -1,391 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>English Janala - Learn English Easily</title>
-    <!-- tailwind + daisy -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Janala - Learn English Easily</title>
+  <!-- tailwind + daisy -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-      
-    </style>
-  </head>
-  <body class="bg-gray-50">
-    <!-- Navbar start -->
-    <nav class="navbar bg-white shadow-md px-4 py-3 sticky top-0 z-50">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul
-            tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-4 shadow gap-2"
-          >
-            <li><a href="#home" class="btn btn-ghost justify-start"><i class="fa-solid fa-house mr-2"></i> Home</a></li>
-            <li><a href="#book" class="btn btn-ghost justify-start"><i class="fa-solid fa-book-open mr-2"></i> Lessons</a></li>
-            <li><a href="#faq" class="btn btn-ghost justify-start"><i class="fa-solid fa-circle-question mr-2"></i> FAQ</a></li>
-            <li><a href="#" class="btn btn-ghost justify-start"><i class="fa-solid fa-right-from-bracket mr-2"></i> Logout</a></li>
-          </ul>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+  </style>
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navbar start -->
+  <nav class="navbar bg-white shadow-md px-4 py-3 sticky top-0 z-50">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
         </div>
-        <a href="index.html" class="flex items-center">
-          <span class="text-xl font-bold text-primary">English</span>
-          <img src="./assets/logo.png" alt="Logo" class="w-10 h-10 mx-2" />
-          <span class="text-xl font-semibold text-secondary">জানালা</span>
-        </a>
-      </div>
-      <div class="navbar-end hidden lg:flex">
-        <ul class="menu menu-horizontal px-1 flex items-center gap-2">
-          <li><a href="#home" class="btn btn-ghost"><i class="fa-solid fa-house mr-1"></i> Home</a></li>
-          <li><a href="#book" class="btn btn-ghost"><i class="fa-solid fa-book-open mr-1"></i> Lessons</a></li>
-          <li><a href="#faq" class="btn btn-ghost"><i class="fa-solid fa-circle-question mr-1"></i> FAQ</a></li>
-          <li><a href="#" class="btn btn-gradient"><i class="fa-solid fa-right-from-bracket mr-1"></i> Logout</a></li>
+        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-4 shadow gap-2">
+          <li><a href="#home" class="btn btn-ghost justify-start"><i class="fa-solid fa-house mr-2"></i> Home</a></li>
+          <li><a href="#book" class="btn btn-ghost justify-start"><i class="fa-solid fa-book-open mr-2"></i> Lessons</a>
+          </li>
+          <li><a href="#faq" class="btn btn-ghost justify-start"><i class="fa-solid fa-circle-question mr-2"></i>
+              FAQ</a></li>
+          <li><a href="#" class="btn btn-ghost justify-start"><i class="fa-solid fa-right-from-bracket mr-2"></i>
+              Logout</a></li>
         </ul>
       </div>
-    </nav>
-    <!-- Navbar end -->
+      <a href="index.html" class="flex items-center">
+        <span class="text-xl font-bold text-primary">English</span>
+        <img src="./assets/logo.png" alt="Logo" class="w-10 h-10 mx-2" />
+        <span class="text-xl font-semibold text-secondary">জানালা</span>
+      </a>
+    </div>
+    <div class="navbar-end hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 flex items-center gap-2">
+        <li><a href="#home" class="btn btn-ghost"><i class="fa-solid fa-house mr-1"></i> Home</a></li>
+        <li><a href="#book" class="btn btn-ghost"><i class="fa-solid fa-book-open mr-1"></i> Lessons</a></li>
+        <li><a href="#faq" class="btn btn-ghost"><i class="fa-solid fa-circle-question mr-1"></i> FAQ</a></li>
+        <li><a href="#" class="btn btn-gradient"><i class="fa-solid fa-right-from-bracket mr-1"></i> Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar end -->
 
-    <!-- header start -->
-    <section id="home" class="header container mx-auto flex flex-col md:flex-row justify-between items-center px-4 md:px-8 lg:px-12 py-12 md:py-16 gap-8 md:gap-12">
-      <!-- Left Content -->
-      <div class="content text-center md:text-left max-w-xl">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
-          <span class="text-transparent bg-clip-text gradient-bg">English</span> Made Easy!!
-        </h1>
+  <!-- header start -->
+  <section id="home"
+    class="header container mx-auto flex flex-col md:flex-row justify-between items-center px-4 md:px-8 lg:px-12 py-12 md:py-16 gap-8 md:gap-12">
+    <!-- Left Content -->
+    <div class="content text-center md:text-left max-w-xl">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        <span class="text-transparent bg-clip-text gradient-bg">English</span> Made Easy!!
+      </h1>
 
-        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-          আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
-          আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
-          অন্য একটি Level এ
-        </p>
+      <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+        আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+        আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+        অন্য একটি Level এ
+      </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-          <input
-            type="text"
-            placeholder="Enter Your Name"
-            class="flex-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            class="flex-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-          />
-          <button type="submit" class="btn btn-gradient rounded-lg py-3 px-6 font-medium">
-            Get Started <i class="fa-solid fa-arrow-right ml-2"></i>
-          </button>
-        </div>
+      <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+        <input type="text" placeholder="Enter Your Name"
+          class="flex-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" />
+        <input type="password" placeholder="Password"
+          class="flex-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" />
+        <button type="submit" class="btn btn-gradient rounded-lg py-3 px-6 font-medium">
+          Get Started <i class="fa-solid fa-arrow-right ml-2"></i>
+        </button>
       </div>
-
-      <!-- Right Image -->
-      <div class="image-sec flex justify-center md:justify-end">
-        <img
-          src="./assets/hero-student.png"
-          alt="Student Learning"
-          class="w-[280px] sm:w-[350px] md:w-[400px] lg:w-[500px]"
-        />
-      </div>
-    </section>
-    <!-- header end -->
-
-    <!-- Features section -->
-    <section class="bg-gray-100 py-12">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Why Choose <span class="text-primary">English Janala</span>?</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-xl p-6 text-center card-hover">
-            <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="fa-solid fa-graduation-cap text-purple-700 text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Structured Lessons</h3>
-            <p class="text-gray-600">Step-by-step curriculum designed by language experts</p>
-          </div>
-          
-          <div class="bg-white rounded-xl p-6 text-center card-hover">
-            <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="fa-solid fa-microphone text-black text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Pronunciation Practice</h3>
-            <p class="text-gray-600">Improve your accent with our speech recognition technology</p>
-          </div>
-          
-          <div class="bg-white rounded-xl p-6 text-center card-hover">
-            <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="fa-solid fa-gamepad text-blue-700 text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Interactive Learning</h3>
-            <p class="text-gray-600">Engaging games and activities to make learning fun</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Let's Learn Vocabularies start -->
-    <section
-      class="container mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 gap-8"
-      id="book"
-    >
-      <h2 class="text-3xl font-bold text-center mb-4">
-        <span class="text-primary">Let's</span> Learn Vocabularies
-      </h2>
-      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-8">Select a difficulty level to explore vocabulary words and expand your English knowledge</p>
-
-      <div
-        id="level-container"
-        class="flex justify-center gap-4 mt-3 flex-wrap mb-8"
-      >
-        <button class="btn btn-gradient px-6 py-2 rounded-full">Beginner</button>
-        <button class="btn btn-outline btn-primary px-6 py-2 rounded-full">Intermediate</button>
-        <button class="btn btn-outline btn-primary px-6 py-2 rounded-full">Advanced</button>
-      </div>
-
-      <div
-        id="word-container"
-        class="bg-gray-50 p-6 rounded-xl w-full mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-6"
-      >
-        <div class="col-span-4 flex flex-col items-center justify-center h-64">
-          <div class="w-24 h-24 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fa-solid fa-book-open text-white text-3xl"></i>
-          </div>
-          <p class="text-lg font-medium text-gray-600">আপনি এখনো কোন Lesson Select করেননি</p>
-          <h4 class="text-xl font-bold text-gray-800 mt-2">একটি Lesson Select করুন।</h4>
-        </div>
-      </div>
-    </section>
-    <!-- Let's Learn Vocabularies end -->
-
-    <!-- FAQ start -->
-    <section
-      class="container mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 gap-8 bg-gray-100 rounded-xl my-8"
-      id="faq"
-    >
-      <h2 class="text-3xl font-bold text-center mb-8">
-        <span class="text-primary">Frequently</span> Asked Questions
-      </h2>
-
-      <div class="accordion max-w-3xl mx-auto">
-        <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-box mb-4">
-          <input type="radio" name="my-accordion-3" checked="checked" />
-          <div class="collapse-title text-xl font-medium">
-            How can I start learning English on this website?
-          </div>
-          <div class="collapse-content">
-            <p class="text-gray-600">You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</p>
-          </div>
-        </div>
-
-        <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-box mb-4">
-          <input type="radio" name="my-accordion-3" />
-          <div class="collapse-title text-xl font-medium">
-            Is this website free to use?
-          </div>
-          <div class="collapse-content">
-            <p class="text-gray-600">Yes, all our basic lessons and vocabulary exercises are completely free. We offer premium features for advanced learning, but the core content remains accessible to everyone.</p>
-          </div>
-        </div>
-
-        <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-box mb-4">
-          <input type="radio" name="my-accordion-3" />
-          <div class="collapse-title text-xl font-medium">
-            Do I need to create an account?
-          </div>
-          <div class="collapse-content">
-            <p class="text-gray-600">While you can access some content without an account, we recommend creating a free account to track your progress, save your favorite words, and personalize your learning experience.</p>
-          </div>
-        </div>
-        
-        <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-box mb-4">
-          <input type="radio" name="my-accordion-3" />
-          <div class="collapse-title text-xl font-medium">
-            How often is new content added?
-          </div>
-          <div class="collapse-content">
-            <p class="text-gray-600">We add new vocabulary lessons every week and update our course materials monthly based on user feedback and the latest language learning methodologies.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- FAQ end -->
-
-
-
-     <!-- Modal -->
-   <div id="myModal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50">
-       <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            <!-- Modal Header -->
-            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white relative">
-                <button class="absolute top-4 right-4 text-white/80 hover:text-white" onclick="closeModal()">
-                    <i class="fa-solid fa-xmark text-2xl"></i>
-                </button>
-
-                <div class="flex items-center justify-between">
-                    <div>
-                        <span class="text-sm font-medium bg-white/20 py-1 px-3 rounded-full">Level 3</span>
-                        <h2 class="text-4xl font-bold mt-3">Brisk</h2>
-                        <p class="text-blue-100 font-mono mt-1 text-lg">ব্রিস্ক</p>
-                    </div>
-                    <div class="text-right">
-                        <div class="points-badge bg-amber-400 text-amber-900 py-2 px-4 rounded-full text-lg font-bold">
-                            <i class="fa-solid fa-star mr-1"></i> 3 Points
-                        </div>
-                        <p class="text-xs font-medium opacity-80 mt-2">ID: 27</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal Body -->
-            <div class="p-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Left Column -->
-                    <div class="space-y-6">
-                        <div>
-                            <h3 class="text-sm font-semibold text-gray-500 mb-2">MEANING</h3>
-                            <p class="text-xl text-gray-800">চটপটে / দ্রুত</p>
-                        </div>
-
-                        <div>
-                            <h3 class="text-sm font-semibold text-gray-500 mb-2">PART OF SPEECH</h3>
-                            <div class="bg-blue-50 rounded-lg p-4">
-                                <p class="text-lg font-medium text-blue-700">Adjective</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-sm font-semibold text-gray-500 mb-2">PRONUNCIATION</h3>
-                            <div class="bg-gray-50 rounded-lg p-4 flex items-center">
-                                <i class="fa-solid fa-volume-high text-blue-500 text-xl mr-3"></i>
-                                <p class="text-lg font-mono">ব্রিস্ক</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Column -->
-                    <div class="space-y-6">
-                        <div>
-                            <h3 class="text-sm font-semibold text-gray-500 mb-2">EXAMPLE SENTENCE</h3>
-                            <div class="bg-blue-50 rounded-lg p-4">
-                                <p class="text-gray-700 text-lg">He took a brisk walk in the morning.</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-sm font-semibold text-gray-500 mb-2">SYNONYMS</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="synonym-tag bg-blue-100 text-blue-700 py-2 px-4 rounded-full">quick</span>
-                                <span
-                                    class="synonym-tag bg-blue-100 text-blue-700 py-2 px-4 rounded-full">energetic</span>
-                                <span class="synonym-tag bg-blue-100 text-blue-700 py-2 px-4 rounded-full">lively</span>
-                                <span class="synonym-tag bg-blue-100 text-blue-700 py-2 px-4 rounded-full">active</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Additional Info -->
-                <div class="mt-8 pt-6 border-t border-gray-200">
-                    <h3 class="text-sm font-semibold text-gray-500 mb-4">WORD DETAILS</h3>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-gray-600">
-                            The word "brisk" describes something done in an active, quick, or energetic way.
-                            It often refers to movement or activity that is invigorating and efficient.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal Footer -->
-            <div class="bg-gray-50 px-6 py-4 flex justify-end">
-                <button
-                    class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg font-medium transition-colors"
-                    onclick="closeModal()">
-                    Close
-                </button>
-            </div>
-        </div>
     </div>
 
-    <!-- Footer start -->
-    <footer class="bg-gray-800 text-white px-8 py-12">
-      <div class="container mx-auto">
-        <div class="flex flex-col md:flex-row justify-between gap-8">
-          <!-- Left Section -->
-          <div class="text-center md:text-left">
-            <a
-              href="index.html"
-              class="text-xl flex justify-center md:justify-start items-center gap-2 mb-4"
-            >
-              <span class="text-lg font-bold text-white">English</span>
-              <img src="./assets/logo.png" alt="" class="w-8 h-8" />
-              <span class="text-lg font-semibold text-white">জানালা</span>
-            </a>
-            <p class="text-gray-400 mb-1">ইংরেজি শিখুন সহজে</p>
-            <p class="text-gray-400">Providing ED-Tech Applications since 2025</p>
-          </div>
+    <!-- Right Image -->
+    <div class="image-sec flex justify-center md:justify-end">
+      <img src="./assets/hero-student.png" alt="Student Learning"
+        class="w-[280px] sm:w-[350px] md:w-[400px] lg:w-[500px]" />
+    </div>
+  </section>
+  <!-- header end -->
 
-          <!-- Middle Section -->
-          <div class="text-center">
-            <p class="font-medium mb-4">Quick Links</p>
-            <ul class="space-y-2">
-              <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
-              <li><a href="#book" class="text-gray-400 hover:text-white transition">Lessons</a></li>
-              <li><a href="#faq" class="text-gray-400 hover:text-white transition">FAQ</a></li>
-              <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-            </ul>
-          </div>
+  <!-- Features section -->
+  <section class="bg-gray-100 py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Why Choose <span class="text-primary">English Janala</span>?</h2>
 
-          <!-- Right Section -->
-          <div class="text-center md:text-right">
-            <p class="font-medium mb-4">Follow us</p>
-            <div class="socials flex justify-center md:justify-end gap-4 text-xl">
-              <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#" class="text-gray-400 hover:text-red-500 transition"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#" class="text-gray-400 hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-twitter"></i></a>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-6 text-center card-hover">
+          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-graduation-cap text-purple-700 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Structured Lessons</h3>
+          <p class="text-gray-600">Step-by-step curriculum designed by language experts</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center card-hover">
+          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-microphone text-black text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Pronunciation Practice</h3>
+          <p class="text-gray-600">Improve your accent with our speech recognition technology</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 text-center card-hover">
+          <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-gamepad text-blue-700 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Interactive Learning</h3>
+          <p class="text-gray-600">Engaging games and activities to make learning fun</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Let's Learn Vocabularies start -->
+  <section class="container mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 gap-8" id="book">
+    <h2 class="text-3xl font-bold text-center mb-4">
+      <span class="text-primary">Let's</span> Learn Vocabularies
+    </h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-8">Select a difficulty level to explore vocabulary words
+      and expand your English knowledge</p>
+
+    <div class="max-w-xl w-full mx-auto mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 px-4">
+      <input id="search-input" type="text" placeholder="Search a word..."
+        class="w-full sm:flex-1 px-4 py-2 rounded-xl shadow-sm focus:outline-none focus:ring-2  focus:ring-blue-500 text-base" />
+      <button id="search-btn" 
+        class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-medium rounded-xl shadow-md hover:bg-blue-700 transition text-base">
+        Search
+      </button>
+    </div>
+
+    <!-- Error message -->
+    <div id="error-message"
+      class="hidden max-w-xl w-full mx-auto mt-4 p-4 rounded-2xl bg-red-100 border border-red-400 text-red-700 font-medium shadow-md text-center text-sm sm:text-base px-4">
+    </div>
+
+
+    <div id="error-message"
+      class="hidden max-w-xl mx-auto mt-4 p-4 rounded-2xl bg-red-100 border border-red-400 text-red-700 font-medium shadow-md">
+    </div>
+
+
+    <div id="level-container" class="flex justify-center gap-4 mt-3 flex-wrap mb-8">
+      <button class="btn btn-gradient px-6 py-2 rounded-full">Beginner</button>
+      <button class="btn btn-outline btn-primary px-6 py-2 rounded-full">Intermediate</button>
+      <button class="btn btn-outline btn-primary px-6 py-2 rounded-full">Advanced</button>
+    </div>
+
+    <div id="word-container" class="bg-gray-50 p-6 rounded-xl w-full mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+      <div class="col-span-4 flex flex-col items-center justify-center h-64">
+        <div class="w-24 h-24 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fa-solid fa-book-open text-white text-3xl"></i>
+        </div>
+        <p class="text-lg font-medium text-gray-600">আপনি এখনো কোন Lesson Select করেননি</p>
+        <h4 class="text-xl font-bold text-gray-800 mt-2">একটি Lesson Select করুন।</h4>
+      </div>
+    </div>
+  </section>
+  <!-- Let's Learn Vocabularies end -->
+
+  <!-- FAQ start -->
+  <section class="container mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 gap-8 bg-gray-100 rounded-xl my-8" id="faq">
+    <h2 class="text-3xl font-bold text-center mb-8">
+      <span class="text-primary">Frequently</span> Asked Questions
+    </h2>
+
+    <div class="accordion max-w-3xl mx-auto">
+      <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-box mb-4">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          How can I start learning English on this website?
+        </div>
+        <div class="collapse-content">
+          <p class="text-gray-600">You can start by exploring our beginner lessons, interactive exercises, and quizzes.
+            We also offer structured courses to guide you step by step.</p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-box mb-4">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          Is this website free to use?
+        </div>
+        <div class="collapse-content">
+          <p class="text-gray-600">Yes, all our basic lessons and vocabulary exercises are completely free. We offer
+            premium features for advanced learning, but the core content remains accessible to everyone.</p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-box mb-4">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          Do I need to create an account?
+        </div>
+        <div class="collapse-content">
+          <p class="text-gray-600">While you can access some content without an account, we recommend creating a free
+            account to track your progress, save your favorite words, and personalize your learning experience.</p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-white border border-gray-200 rounded-box mb-4">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          How often is new content added?
+        </div>
+        <div class="collapse-content">
+          <p class="text-gray-600">We add new vocabulary lessons every week and update our course materials monthly
+            based on user feedback and the latest language learning methodologies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ end -->
+
+
+
+  <!-- Modal -->
+  <div id="myModal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white relative">
+        <button class="absolute top-4 right-4 text-white/80 hover:text-white" onclick="closeModal()">
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="text-sm font-medium bg-white/20 py-1 px-3 rounded-full">Level 3</span>
+            <h2 class="text-4xl font-bold mt-3">Brisk</h2>
+            <p class="text-blue-100 font-mono mt-1 text-lg">ব্রিস্ক</p>
+          </div>
+          <div class="text-right">
+            <div class="points-badge bg-amber-400 text-amber-900 py-2 px-4 rounded-full text-lg font-bold">
+              <i class="fa-solid fa-star mr-1"></i> 3 Points
             </div>
-            <p class="mt-6 text-gray-400">© 2025 English Janala. All rights reserved.</p>
+            <p class="text-xs font-medium opacity-80 mt-2">ID: 27</p>
           </div>
         </div>
       </div>
-    </footer>
+
+      <!-- Modal Body -->
+      <div class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Left Column -->
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-500 mb-2">MEANING</h3>
+              <p class="text-xl text-gray-800">চটপটে / দ্রুত</p>
+            </div>
+
+            <div>
+              <h3 class="text-sm font-semibold text-gray-500 mb-2">PART OF SPEECH</h3>
+              <div class="bg-blue-50 rounded-lg p-4">
+                <p class="text-lg font-medium text-blue-700">Adjective</p>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-sm font-semibold text-gray-500 mb-2">PRONUNCIATION</h3>
+              <div class="bg-gray-50 rounded-lg p-4 flex items-center">
+                <i class="fa-solid fa-volume-high text-blue-500 text-xl mr-3"></i>
+                <p class="text-lg font-mono">ব্রিস্ক</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-500 mb-2">EXAMPLE SENTENCE</h3>
+              <div class="bg-blue-50 rounded-lg p-4">
+                <p class="text-gray-700 text-lg">He took a brisk walk in the morning.</p>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-sm font-semibold text-gray-500 mb-2">SYNONYMS</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="synonym-tag bg-blue-100 text-blue-700 py-2 px-4 rounded-full">quick</span>
+                <span class="synonym-tag bg-blue-100 text-blue-700 py-2 px-4 rounded-full">energetic</span>
+                <span class="synonym-tag bg-blue-100 text-blue-700 py-2 px-4 rounded-full">lively</span>
+                <span class="synonym-tag bg-blue-100 text-blue-700 py-2 px-4 rounded-full">active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="mt-8 pt-6 border-t border-gray-200">
+          <h3 class="text-sm font-semibold text-gray-500 mb-4">WORD DETAILS</h3>
+          <div class="bg-gray-50 rounded-lg p-4">
+            <p class="text-gray-600">
+              The word "brisk" describes something done in an active, quick, or energetic way.
+              It often refers to movement or activity that is invigorating and efficient.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-gray-50 px-6 py-4 flex justify-end">
+        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg font-medium transition-colors"
+          onclick="closeModal()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer start -->
+  <footer class="bg-gray-800 text-white px-8 py-12">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-between gap-8">
+        <!-- Left Section -->
+        <div class="text-center md:text-left">
+          <a href="index.html" class="text-xl flex justify-center md:justify-start items-center gap-2 mb-4">
+            <span class="text-lg font-bold text-white">English</span>
+            <img src="./assets/logo.png" alt="" class="w-8 h-8" />
+            <span class="text-lg font-semibold text-white">জানালা</span>
+          </a>
+          <p class="text-gray-400 mb-1">ইংরেজি শিখুন সহজে</p>
+          <p class="text-gray-400">Providing ED-Tech Applications since 2025</p>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="text-center">
+          <p class="font-medium mb-4">Quick Links</p>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="#book" class="text-gray-400 hover:text-white transition">Lessons</a></li>
+            <li><a href="#faq" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Right Section -->
+        <div class="text-center md:text-right">
+          <p class="font-medium mb-4">Follow us</p>
+          <div class="socials flex justify-center md:justify-end gap-4 text-xl">
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-gray-400 hover:text-red-500 transition"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="text-gray-400 hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          <p class="mt-6 text-gray-400">© 2025 English Janala. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
-    <script src="./index.js"></script>
-  </body>
+  <script src="./index.js"></script>
+</body>
+
 </html>
-
-
-
-

@@ -1,27 +1,132 @@
 
 
-const fetchJSON = async (url) => {
-  const res = await fetch(url);
-  return res.json();
+// const fetchJSON = async (url) => {
+//   const res = await fetch(url);
+//   return res.json();
+// };
+
+// const loadLessons = async () => {
+//   const url = "https://openapi.programming-hero.com/api/levels/all";
+//   const json = await fetchJSON(url);
+//   displayLessons(json.data);
+// };
+
+// const wordsLevel = async (levelNo) => {
+//   const url = `https://openapi.programming-hero.com/api/level/${levelNo}`;
+//   const data = await fetchJSON(url);
+//   displayWords(data.data);
+// };
+
+// const wordDetails = async (id) => {
+//   const url = `https://openapi.programming-hero.com/api/word/${id}`;
+//   const json = await fetchJSON(url);
+//   openModal(json.data);
+// };
+
+const searchBtn = document.getElementById("search-btn")
+
+const fetchJSON = (url) => {
+  return fetch(url)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`Server error! Status: ${res.status}`);
+      }
+      return res.json();
+    })
+    .catch((err) => {
+      showError("⚠️ Failed to load data. Please try again.");
+      return null; // return null so caller knows it failed
+    });
 };
 
-const loadLessons = async () => {
+const loadLessons = () => {
   const url = "https://openapi.programming-hero.com/api/levels/all";
-  const json = await fetchJSON(url);
-  displayLessons(json.data);
+  fetchJSON(url)
+    .then((json) => {
+      if (json) {
+        displayLessons(json.data);
+      }
+    });
 };
 
-const wordsLevel = async (levelNo) => {
+const wordsLevel = (levelNo) => {
   const url = `https://openapi.programming-hero.com/api/level/${levelNo}`;
-  const data = await fetchJSON(url);
-  displayWords(data.data);
+  fetchJSON(url)
+    .then((data) => {
+      if (data) {
+        displayWords(data.data);
+      }
+    });
 };
 
-const wordDetails = async (id) => {
+const wordDetails = (id) => {
   const url = `https://openapi.programming-hero.com/api/word/${id}`;
-  const json = await fetchJSON(url);
-  openModal(json.data);
+  fetchJSON(url)
+    .then((json) => {
+      if (json) {
+        openModal(json.data);
+      }
+    });
 };
+const allWord = () => {
+  const url = `https://openapi.programming-hero.com/api/words/all`;
+  return fetchJSON(url)
+    .then((json) => {
+      if (json) {
+        return json.data;
+      }
+      return [];
+    });
+};
+
+
+const searchWord = () => {
+  const input = document.getElementById("search-input");
+  const query = input.value.trim().toLowerCase();
+
+  if (!query) {
+    showError(" Please enter a word to search.");
+    return;
+  }
+
+  allWord()
+    .then((allWords) => {
+
+
+
+      const foundWord = allWords.find(
+        (w) => w.word.toLowerCase() === query
+      );
+
+      if (foundWord) {
+        const container = document.getElementById("error-message");
+        if (container) {
+          container.classList.add("hidden");
+          container.innerText = "";
+        }
+        openModal(foundWord);
+      } else {
+        showError(" No result found for this word.");
+      }
+    });
+};
+
+
+searchBtn.addEventListener('click', searchWord)
+
+
+
+const showError = (message) => {
+  const container = document.getElementById("error-message");
+  if (container) {
+    container.innerText = message;
+    container.classList.remove('hidden')
+  } else {
+    alert(message);
+  }
+};
+
+
 
 
 const displayLessons = (lessons) => {
@@ -47,11 +152,11 @@ const displayLessons = (lessons) => {
         b.classList.add("btn-outline");
       });
 
-  
+
       lessonBtn.classList.add("bg-primary", "text-white");
       lessonBtn.classList.remove("btn-outline");
 
- 
+
       wordsLevel(lesson.level_no);
     });
   });
@@ -118,12 +223,11 @@ function openModal(wdata) {
             <div>
               <h3 class="text-sm font-semibold text-gray-500 mb-2">SYNONYMS</h3>
               <div class="flex flex-wrap gap-2">
-                ${
-                  wdata?.synonyms?.map(
-                    (item) =>
-                      `<span class="synonym-tag bg-blue-100 text-blue-700 py-2 px-4 rounded-full">${item}</span>`
-                  ).join("") || "<p class='text-gray-500'>No synonyms available</p>"
-                }
+                ${wdata?.synonyms?.map(
+    (item) =>
+      `<span class="synonym-tag bg-blue-100 text-blue-700 py-2 px-4 rounded-full">${item}</span>`
+  ).join("") || "<p class='text-gray-500'>No synonyms available</p>"
+    }
               </div>
             </div>
           </div>
@@ -221,3 +325,4 @@ const addSound = (btn, word) => {
 
 
 loadLessons();
+allWord()
