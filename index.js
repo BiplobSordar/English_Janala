@@ -1,31 +1,21 @@
 
 
-// const fetchJSON = async (url) => {
-//   const res = await fetch(url);
-//   return res.json();
-// };
-
-// const loadLessons = async () => {
-//   const url = "https://openapi.programming-hero.com/api/levels/all";
-//   const json = await fetchJSON(url);
-//   displayLessons(json.data);
-// };
-
-// const wordsLevel = async (levelNo) => {
-//   const url = `https://openapi.programming-hero.com/api/level/${levelNo}`;
-//   const data = await fetchJSON(url);
-//   displayWords(data.data);
-// };
-
-// const wordDetails = async (id) => {
-//   const url = `https://openapi.programming-hero.com/api/word/${id}`;
-//   const json = await fetchJSON(url);
-//   openModal(json.data);
-// };
-
 const searchBtn = document.getElementById("search-btn")
 
+
+const showSpinner = () => {
+  const spinner = document.getElementById("loading-spinner");
+  if (spinner) spinner.classList.remove("hidden");
+};
+
+const hideSpinner = () => {
+  const spinner = document.getElementById("loading-spinner");
+  if (spinner) spinner.classList.add("hidden");
+};
+
+
 const fetchJSON = (url) => {
+  showSpinner();
   return fetch(url)
     .then((res) => {
       if (!res.ok) {
@@ -34,9 +24,12 @@ const fetchJSON = (url) => {
       return res.json();
     })
     .catch((err) => {
-      showError("⚠️ Failed to load data. Please try again.");
-      return null; // return null so caller knows it failed
-    });
+      showError(" Failed to load data. Please try again.");
+      return null; 
+    })
+    .finally(() => {
+      hideSpinner();
+    })
 };
 
 const loadLessons = () => {
@@ -48,6 +41,7 @@ const loadLessons = () => {
       }
     });
 };
+
 
 const wordsLevel = (levelNo) => {
   const url = `https://openapi.programming-hero.com/api/level/${levelNo}`;
